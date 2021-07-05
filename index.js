@@ -16,10 +16,10 @@ module.exports = class TimeIn extends Plugin {
             },
             autocomplete: (args) => {
                 if (args[0] == void 0 || args[0] == undefined || args[0] == ""){
-                    return {commands: Timezones, header: "Timezones"}
+                    return {commands: Array.from(Timezones), header: "timezones"}
                 }
                 return {commands: Array.from(Timezones).filter(x => x.toLowerCase().includes(args[0].toLowerCase())),
-                        header: "Timezones"};
+                        header: "timezones"};
                 
                 
             }
