@@ -18,7 +18,7 @@ module.exports = class Template extends Plugin {
                 if (args[0] == void 0 || args[0] == undefined){
                     return {commands: Timezones, header: "Timezones"}
                 }
-                return {commands: Array.from(timezones).filter(x => x.toLowerCase().includes(args[0].toLowerCase())),
+                return {commands: Array.from(Timezones).filter(x => x.toLowerCase().includes(args[0].toLowerCase())),
                         header: "Timezones"};
                 
                 
