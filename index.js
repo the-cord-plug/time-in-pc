@@ -1,10 +1,9 @@
 const { Plugin } = require('powercord/entities');
-const {registerCommand, unregisterCommand} = powercord.api.commands;
 const Timezones = require("./util/timezones.js");
 
 module.exports = class Template extends Plugin {
     startPlugin() {
-        registerCommand({
+        powercord.api.commands.registerCommand({
             command: "time-in",
             description: "Shows you the time in a specified timezone",
             usage: "{c} <timezone>",
@@ -30,6 +29,6 @@ module.exports = class Template extends Plugin {
         })
     }
     pluginWillUnload() {
-        unregisterCommand("time-in");
+        powercord.api.commands.unregisterCommand("time-in");
     }
 };
