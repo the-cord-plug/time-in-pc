@@ -19,6 +19,8 @@ module.exports = class TimeIn extends Plugin {
                     return {commands: Array.from(Timezones).map(timezone => {return {command: timezone, description: `Timezone ${timezone}`}}),
                             header: "timezones"};
                 }
+                if (Array.from(Timezones).filter(x => x.toLowerCase() === args[0].toLowerCase())[0] !== undefined)
+                    return {commands: false};
                 return {commands: Array.from(Timezones).filter(x => x.toLowerCase().includes(args[0].toLowerCase())).map(timezone => {return {command: timezone, description: `Timezone ${timezone}`}}),
                         header: "timezones"};
                 
