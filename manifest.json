@@ -1,7 +1,7 @@
 {
-    "name": "Template",
+    "name": "Time In",
     "version": "1.0.0",
-    "description": "PC Plugin Template",
-    "author": "y/n",
+    "description": "Command that shows you the time in the selected timezone",
+    "author": "jai#0001",
     "license": "DBAD"
 }
