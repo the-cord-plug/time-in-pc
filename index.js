@@ -12,7 +12,7 @@ module.exports = class TimeIn extends Plugin {
                 if (timezone === undefined)
                     return {send: false, result: `${args[0]} is not a valid timezone!`};
                 return {send: false, 
-                        result: `It is currently ${Date.now().toLocaleString("", {timeZone: timezone})} in ${args[0]}`};
+                        result: `It is currently ${Date.now().toLocaleString(undefined, {timeZone: timezone})} in ${args[0]}`};
             },
             autocomplete: (args) => {
                 if (args[0] == void 0 || args[0] == undefined || args[0] == ""){
