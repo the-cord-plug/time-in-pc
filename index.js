@@ -1,5 +1,5 @@
 const { Plugin } = require('powercord/entities');
-const {api: {commands: {registerCommand, unregisterCommand}}} = powercord;
+const {registerCommand, unregisterCommand} = powercord.api.commands;
 const Timezones = require("./util/timezones.js");
 
 module.exports = class Template extends Plugin {
@@ -30,6 +30,6 @@ module.exports = class Template extends Plugin {
         })
     }
     pluginWillUnload() {
-        return;
+        unregisterCommand("time-in");
     }
 };
